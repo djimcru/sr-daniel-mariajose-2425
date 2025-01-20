@@ -1,0 +1,33 @@
+$TTL 604800
+$ORIGIN ejemplo.com.
+ejemplo.com.	IN	 SOA	PC11	admin (
+			                2	   ; Serial
+                                   604800          ; Refresh
+                                    86400          ; Retry
+                                  2419200          ; Expire
+	                           604800 )        ; Negative Cache TTL
+
+; Servidores de nombres
+@	IN	NS	PC11.ejemplo.com.
+	IN	NS	PC12.ejemplo.com.
+
+; RRHH
+1	IN	PTR	PC1.ejemplo.com.
+2	IN	PTR	PC2.ejemplo.com.
+;Administracion
+3	IN	PTR	PC3.recepcion.ejemplo.com.
+4	IN	PTR	PC4.recepcion.ejemplo.com.
+5	IN	PTR	PC5.contabilidad.ejemplo.com.
+6	IN	PTR	PC6.contabilidad.ejemplo.com.
+7	IN	PTR	PC7.secretaria.ejemplo.com.
+8	IN	PTR	PC8.secretaria.ejemplo.com.
+9	IN	PTR	PC9.secretaria.ejemplo.com.
+
+; Servidores
+; Debian1-Pruebas, nuestro router, tiene2 IPs
+; en redes diferentes.Por tanto hay 1 registro PTR
+; cada fichero de zona inversa */
+10	IN	PTR	PC10.ejemplo.com
+11	IN	PTR	PC11.ejemplo.com
+12	IN	PTR	PC12.ejemplo.com
+13	IN	PTR	servidorimpresion.ejemplo.com.

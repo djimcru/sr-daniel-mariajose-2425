@@ -3,11 +3,18 @@ zone "ejemplo.com"
 	type master;
 	file "/var/lib/bind/db.ejemplo.com";
 };
-//
-// Do any local configuration here
-//
+// Zonas inversas 
 
-// Consider adding the 1918 zones here, if they are not used in your
-// organization
-//include "/etc/bind/zones.rfc1918";
+// Red No1:172.17.36.0/24
+zone "36.17.172.in-addr.arpa"
+{
+	type master;
+	file "/var/lib/bind/db.172.17.36";
+};
 
+// Red No2: 172.17.35.0/24
+zonee "35.17.172.in-addr.arpa"
+{
+	type master;
+	file "/var/lib/bind/db.172.17.35";
+};
